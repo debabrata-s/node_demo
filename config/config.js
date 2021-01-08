@@ -1,0 +1,1 @@
+const DB = "mongodb+srv://dev:debabratas@cluster0.eikuq.mongodb.net/<dbname>?retryWrites=true&w=majority"
