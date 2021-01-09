@@ -15,3 +15,9 @@ exports.removeUser = (req, res) => {
     User.removeUser(req.params.id);
     res.send(User.getUsers());
 }
+exports.updateUser = (req, res) => {
+    const newUser = req.body;
+    const user = new User(newUser.id, newUser.name, newUser.role);
+    user.updateUser(req.params.id);
+    res.send(User.getUsers());
+}

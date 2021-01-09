@@ -8,6 +8,12 @@ module.exports = class User {
     addUser() {
         users.push(this);
     }
+    updateUser(id){
+        let index = users.findIndex(user => user.id == id);
+        if(index >=0){
+            users[index] = this;
+        }
+    }
     static removeUser(id) {
         let index = users.findIndex(user => user.id == id);
         if (index >= 0) {
